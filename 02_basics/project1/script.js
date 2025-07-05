@@ -7,7 +7,7 @@ addbtn.addEventListener('click',addtodo)
 clearbtn.addEventListener('click',cleartodos)
 
 function addtodo() {
-    const todoText = input.ariaValueMax.trim();
+    const todoText = input.value.trim();
 
     if(todoText === ""){
         alert("Please enter a task")
@@ -30,8 +30,8 @@ function addtodo() {
     
     list.appendChild(li);
     input.value=""; //clear input
+}
 
-    function cleartodos(){
-        list.innerHTML= "";
-    }
+function cleartodos(){
+    list.innerHTML= "";
 }
